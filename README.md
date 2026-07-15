@@ -1,5 +1,7 @@
 # Witch Hat Atelier Simulator
 
+**A web-based magical circle simulator inspired by the Witch Hat Atelier universe.**
+
 Simulateur web de creation de cercles magiques, pense comme une petite planche
 d'atelier: encre noire, glyphes, sceaux et lecture du rituel.
 
@@ -46,6 +48,18 @@ meme point au lieu de partir hors champ.
 
 Raccourcis: `Cmd/Ctrl + Z` defait, `Cmd/Ctrl + Shift + Z` refait,
 `Cmd/Ctrl + S` archive, `A` active, `L` lit le cercle et `Echap` efface.
+
+## Features
+
+- ✨ **Circle Drawing Tools**: Complete toolkit for creating magical circles with sigils, rings, and directional lines
+- 📚 **Comprehensive Library**: 47 unique sigil designs organized from Witch Hat Atelier universe reference
+- 🎯 **Spell Grammar Engine**: Deterministic spell combination system with 6,669 verified variations
+- 3️⃣ **3D Visualization**: Manipulable 3D representation of completed circles
+- 📐 **Precise Scaling**: Physical scale grid (1 square = 5cm) with real-time diameter calculation
+- 🎨 **Support Options**: Paper, flying shoes, and element-specific effects
+- ⚡ **Element System**: Fire, water, wind, earth with dynamic visual effects
+- 🌐 **Cross-Platform**: Works on desktop and mobile browsers
+- 📝 **Comprehensive Documentation**: Extensive reference materials and technical guides
 
 ## Ouvrir le site
 
@@ -149,3 +163,33 @@ node scripts/validate-spell-matrix.mjs
 
 Le dernier controle doit annoncer 47 dessins, 6 669 recettes uniques, 6 144
 plans executables et 19 regles logiques validees.
+
+## Deployment
+
+### GitHub Pages
+
+Push to GitHub and enable GitHub Pages in repository settings to serve the static site automatically.
+
+### Netlify / Vercel
+
+Connect your GitHub repository and both services will auto-deploy on push.
+
+### Docker
+
+```dockerfile
+FROM python:3.11-slim
+WORKDIR /app
+COPY . .
+EXPOSE 8000
+CMD ["python3", "-m", "http.server", "8000", "--bind", "0.0.0.0"]
+```
+
+## Resources & References
+
+- **Witch Hat Atelier**: Official manga series by Kamome Shirahama
+- **Documentation**: See `docs/` for detailed technical and design documentation
+- **Security**: See `SECURITY.md` for security considerations before public deployment
+
+## License
+
+This is a fan-made project inspired by the Witch Hat Atelier universe. Please respect intellectual property rights and copyright policies as outlined in `docs/research-notes.md`.
