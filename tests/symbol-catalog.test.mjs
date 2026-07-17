@@ -21,5 +21,5 @@ test("le navigateur charge la nouvelle version du catalogue partage", async () =
   const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 
   assert.match(app, /symbol-catalog\.mjs\?v=20260716-decorative-sigils-v1/);
-  assert.match(html, /app\.js\?v=20260716-decorative-sigils-v1/);
+  assert.match(html, /app\.js\?v=20260716-touch-scroll-v1/);
 });

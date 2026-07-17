@@ -75,3 +75,15 @@ test("la palette cable le transport Scratch jusqu'au canevas", async () => {
   assert.match(app, /state\.exporting = false/);
   assert.match(readme, /glisser.*Scratch/i);
 });
+
+test("le defilement tactile vertical ne demarre pas le transport d'un symbole", async () => {
+  const app = await readFile(new URL("../app.js", import.meta.url), "utf8");
+  const css = await readFile(new URL("../styles.css", import.meta.url), "utf8");
+  const placementCardRule = css.match(/\.placement-card\s*\{([\s\S]*?)\n\}/)?.[1] || "";
+
+  assert.match(app, /classifySymbolDragGesture/);
+  assert.match(app, /symbolDragIntent/);
+  assert.match(app, /function resolveSymbolDragIntent\(/);
+  assert.match(placementCardRule, /touch-action:\s*pan-y/);
+  assert.doesNotMatch(placementCardRule, /touch-action:\s*none/);
+});
