@@ -22,8 +22,8 @@ test("the shared catalogue exposes all 26 editable sigils", () => {
 });
 
 test("Aeriforms and Whorling Wind keep their distinct canonical drawings", () => {
-  assert.match(SYMBOL_PATHS.Aeriforme.join(" "), /M24 7 C18 7/);
-  assert.match(SYMBOL_PATHS.Aeriforme.join(" "), /M4 24 H14/);
+  assert.match(SYMBOL_PATHS.Aeriforme.join(" "), /M25 6 C19 6/);
+  assert.match(SYMBOL_PATHS.Aeriforme.join(" "), /M4 24 H15/);
   assert.equal(SYMBOL_PATHS["Vent tourbillonnant"].length, 7);
   assert.match(SYMBOL_PATHS["Vent tourbillonnant"][0], /M24 17 L15 31 L33 31 Z/);
 });
